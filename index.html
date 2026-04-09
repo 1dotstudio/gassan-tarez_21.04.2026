@@ -52,7 +52,7 @@
         }
 
         .section {
-            padding: 40px 16px;
+            padding: 20px 16px; /* צמצום משמעותי של ה-padding */
             max-width: 480px;
             margin: auto;
             width: 100%;
@@ -61,72 +61,9 @@
         #countdown {
             display: flex;
             justify-content: center;
-            gap: clamp(10px, 4vw, 30px);
-            margin: 30px -16px;
-            padding: 24px 16px;
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            background-color: #111;
-        }
-
-        .count-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: clamp(2rem, 8vw, 3.5rem);
-            font-weight: bold;
-            min-width: clamp(50px, 18vw, 90px);
-        }
-
-        .count-label {
-            font-size: clamp(0.55rem, 2vw, 0.75rem);
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 6px;
-        }
-
-        .timeline {
-            border-left: 2px solid var(--gold);
-            margin: 40px auto;
-            width: fit-content;
-            text-align: left;
-            padding-left: 30px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -37px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            background: var(--gold);
-            border-radius: 50%;
-        }
-
-        .venue-section {
-            background-color: #f9f9f9;
-            max-width: 480px;
-            padding: 30px 16px;
-        }
-
-        .logoCH {
-            max-width: min(260px, 65vw);
-            margin: 10px 0;
-        }
-
-        #countdown {
-            display: flex;
-            justify-content: center;
-            gap: clamp(10px, 4vw, 30px);
-            margin: 20px 0;
-            padding: 20px 12px;
+            gap: clamp(10px, 3vw, 20px); /* צמצום ה-gap */
+            margin: 15px 0; /* צמצום מרווחים חיצוניים */
+            padding: 20px 10px;
             font-family: 'Cinzel', serif;
             color: var(--gold);
             background-color: #111;
@@ -149,6 +86,43 @@
             letter-spacing: 2px;
             margin-top: 4px;
         }
+
+        .timeline {
+            border-left: 2px solid var(--gold);
+            margin: 20px auto; /* צמצום מרווח עליון ותחתון */
+            width: fit-content;
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px; /* צמצום מרווח בין פריטים */
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        .venue-section {
+            background-color: #f9f9f9;
+            max-width: 480px;
+            padding: 20px 16px; /* צמצום padding */
+        }
+
+        .logoCH {
+            max-width: min(200px, 55vw); /* הקטנת המקסימום של הלוגו */
+            margin: 5px 0;
+        }
+
+        .rsvp-form {
             background: white;
             padding: 24px 20px;
             border-radius: 10px;
@@ -190,22 +164,12 @@
             transition: background-color 0.2s ease;
         }
 
-        .rsvp-form button:hover {
-            background-color: #a8843a;
-        }
-
         iframe {
             width: 100%;
             height: 350px;
             border: 0;
             border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .couple-img {
-            width: 100%;
-            border-radius: 10px;
-            animation: fadeInUp 1.5s ease;
+            margin-top: 15px;
         }
 
         @keyframes fadeInUp {
@@ -223,7 +187,7 @@
     </div>
 
     <div class="section">
-        <h2 style="font-family: 'Cinzel';">ENGAGEMENT DAY</h2>
+        <h2 style="font-family: 'Cinzel'; margin-bottom: 10px;">ENGAGEMENT DAY</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <strong>19:00 - 20:30</strong><br>
@@ -241,19 +205,17 @@
             <div class="count-item"><span id="minutes">00</span><span class="count-label">Mins</span></div>
             <div class="count-item"><span id="seconds">00</span><span class="count-label">Secs</span></div>
         </div>
-
-
     </div>
 
     <div class="section venue-section">
         <img src="LogoCH.png" alt="Venue Logo" class="logoCH">
-        <h3 style="color: var(--dark); font-family: 'Cinzel', serif; letter-spacing: 3px;">The Venue</h3>
-        <iframe src="https://maps.google.com/maps?q=%D7%94%D7%A8%D7%91%20%D7%A4%D7%A8%D7%A5%20%D7%97%D7%99%D7%95%D7%AA%203%2C%20%D7%97%D7%99%D7%A4%D7%94&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Venue Map" loading="lazy"></iframe>
+        <h3 style="color: var(--dark); font-family: 'Cinzel', serif; letter-spacing: 3px; margin: 10px 0;">The Venue</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.835821568297!2d34.98555249999999!3d32.823194299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dba4c6551b96f%3A0x6a0a09e0802c659e!2z16vXqNeRINek16jXpSDXl9mZ16XXqiAzLCDXl9mZ16TXlA!5e0!3m2!1siw!2sil!4v1712671500000!5m2!1siw!2sil" title="Venue Map" loading="lazy"></iframe>
     </div>
 
     <div class="section">
-        <h2 style="font-family: 'Cinzel';">We can't wait to celebrate together!</h2>
-        <p>Kindly complete the RSVP form below. We'd love to hear from you!</p>
+        <h2 style="font-family: 'Cinzel'; margin-bottom: 5px;">We can't wait to celebrate!</h2>
+        <p style="margin-bottom: 20px;">Kindly complete the RSVP form below.</p>
 
         <div class="rsvp-form" id="rsvpForm">
             <label for="name">الاسم الكامل / שם מלא *</label>
