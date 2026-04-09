@@ -55,9 +55,11 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin: 30px 0;
+            margin: 30px -20px;
+            padding: 30px 20px;
             font-family: 'Cinzel', serif;
             color: var(--gold);
+            background-color: #111;
         }
 
         .count-item {
@@ -101,8 +103,14 @@
             border-radius: 50%;
         }
 
+        .venue-section {
+            background-color: #111;
+            max-width: 100%;
+            padding: 60px 20px;
+        }
+
         .logoCH {
-            max-width: 180px;
+            max-width: 280px;
             margin: 20px 0;
         }
 
@@ -203,10 +211,9 @@
 
     </div>
 
-    <div class="section">
-        <img src="logoCH.png" alt="Venue Logo" class="logoCH">
-        <h3>The Venue</h3>
-        <p>הרב פרץ חיות 3, חיפה</p>
+    <div class="section venue-section">
+        <img src="LogoCH.png" alt="Venue Logo" class="logoCH">
+        <h3 style="color: var(--gold); font-family: 'Cinzel', serif; letter-spacing: 3px;">The Venue</h3>
         <iframe src="https://maps.google.com/maps?q=%D7%94%D7%A8%D7%91%20%D7%A4%D7%A8%D7%A5%20%D7%97%D7%99%D7%95%D7%AA%203%2C%20%D7%97%D7%99%D7%A4%D7%94&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Venue Map" loading="lazy"></iframe>
     </div>
 
