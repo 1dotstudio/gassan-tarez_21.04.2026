@@ -48,12 +48,14 @@
             margin: 10px 0;
         }
 
-        .venue-name-hero {
+        /* Styling for the relocated venue name */
+        .venue-name-after-hero {
             font-family: 'Cinzel', serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
             letter-spacing: 2px;
             color: var(--gold);
-            margin-bottom: 15px;
+            margin: 20px 0 10px 0; /* Space after image, space before next section */
+            font-weight: 700;
         }
 
         .section {
@@ -194,9 +196,10 @@
     <div class="hero">
         <h1>Gassan & Tarez</h1>
         <p>ARE GETTING ENGAGED</p>
-        <div class="venue-name-hero">At Carmel Events Haifa</div>
         <div style="font-size: 1.2rem; font-family: 'Cinzel';">21.04.2026<br>Tuesday | 19:00</div>
     </div>
+
+    <div class="venue-name-after-hero">At Carmel Events Haifa</div>
 
     <div class="section">
         <h2 style="font-family: 'Cinzel'; margin-bottom: 10px;">ENGAGEMENT DAY</h2>
@@ -229,7 +232,7 @@
         <img src="LogoCH.png" alt="Venue Logo" class="logoCH">
         <h3 style="color: var(--dark); font-family: 'Cinzel', serif; letter-spacing: 3px; margin: 10px 0;">Carmel Events Haifa</h3>
         <p style="font-size: 0.9rem; margin-bottom: 10px;">הרב פרץ חיות 3, חיפה</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.475440626359!2d34.98565257628864!3d32.80617304307431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dba7575c5350f%3A0x59d29e4694b9693a!2z15TXqNeRINek16XXpyDXlyXmpyXldeXIDMsINeX15mXpNeV!5e0!3m2!1siw!2sil!4v1700000000000!5m2!1siw!2sil" title="Venue Map" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/contrib/111035565323077282164/reviews" title="Venue Map" loading="lazy"></iframe>
     </div>
 
     <div class="section">
@@ -240,7 +243,7 @@
             <label for="name">الاسم الكامل / שם מלא *</label>
             <input type="text" id="name" required placeholder="أدخل اسمك الكامل">
 
-            <label for="attendance">هل ستتمكن من الحضور؟ / האם תגיע/י? *</label>
+            <label for="attendance">هل ستتمكن من الحضور؟ / האם تגיע/י? *</label>
             <select id="attendance" required>
                 <option value="כן, אני מגיע/ה">نعم، سأحضر / כן, אני מגיע/ה</option>
                 <option value="לצערי לא אוכל להגיע">آسف، لن أتمكن / לצערי לא אוכל להגיע</option>
