@@ -27,7 +27,7 @@
 
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img1.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img2.jpg') no-repeat center center/cover;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             color: white;
         }
@@ -42,27 +42,66 @@
 
         .hero p {
             font-family: 'Cinzel', serif;
-            font-size: clamp(0.8rem, 3.5vw, 1.5rem);
+            font-size: clamp(0.8rem, 3.5vw, 1.3rem);
             letter-spacing: 3px;
-            padding: 0 16px;
+            margin: 10px 0;
         }
 
-        .hero > div {
-            font-size: clamp(0.9rem, 3vw, 1.2rem) !important;
+        .venue-name-hero {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 15px;
         }
 
         .section {
-            padding: 20px 16px; /* צמצום משמעותי של ה-padding */
+            padding: 20px 16px;
             max-width: 480px;
             margin: auto;
             width: 100%;
         }
 
+        .timeline {
+            border-left: 2px solid var(--gold);
+            margin: 20px auto;
+            width: fit-content;
+            text-align: left;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        /* Countdown Styles */
+        .countdown-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            color: var(--dark);
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
         #countdown {
             display: flex;
             justify-content: center;
-            gap: clamp(10px, 3vw, 20px); /* צמצום ה-gap */
-            margin: 15px 0; /* צמצום מרווחים חיצוניים */
+            gap: clamp(10px, 3vw, 20px);
+            margin-bottom: 20px;
             padding: 20px 10px;
             font-family: 'Cinzel', serif;
             color: var(--gold);
@@ -87,38 +126,13 @@
             margin-top: 4px;
         }
 
-        .timeline {
-            border-left: 2px solid var(--gold);
-            margin: 20px auto; /* צמצום מרווח עליון ותחתון */
-            width: fit-content;
-            text-align: left;
-            padding-left: 30px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 20px; /* צמצום מרווח בין פריטים */
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -37px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            background: var(--gold);
-            border-radius: 50%;
-        }
-
         .venue-section {
             background-color: #f9f9f9;
-            max-width: 480px;
-            padding: 20px 16px; /* צמצום padding */
+            padding: 20px 16px;
         }
 
         .logoCH {
-            max-width: min(200px, 55vw); /* הקטנת המקסימום של הלוגו */
+            max-width: min(200px, 55vw);
             margin: 5px 0;
         }
 
@@ -139,8 +153,7 @@
             margin-bottom: 4px;
         }
 
-        .rsvp-form input,
-        .rsvp-form select {
+        .rsvp-form input, .rsvp-form select {
             width: 100%;
             padding: 15px;
             border: 1px solid #ddd;
@@ -160,8 +173,6 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            letter-spacing: 1px;
-            transition: background-color 0.2s ease;
         }
 
         iframe {
@@ -183,15 +194,20 @@
     <div class="hero">
         <h1>Gassan & Tarez</h1>
         <p>ARE GETTING ENGAGED</p>
-        <div style="font-size: 1.2rem; margin-top: 20px;">21.04.2026<br>Tuesday | 19:00</div>
+        <div class="venue-name-hero">At Carmel Events Haifa</div>
+        <div style="font-size: 1.2rem; font-family: 'Cinzel';">21.04.2026<br>Tuesday | 19:00</div>
     </div>
 
     <div class="section">
         <h2 style="font-family: 'Cinzel'; margin-bottom: 10px;">ENGAGEMENT DAY</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <strong>19:00 - 20:30</strong><br>
-                Warm-up with <strong>DJ Set</strong>
+                <strong>19:00 - 20:00</strong><br>
+                Reception & <strong>DJ Set</strong>
+            </div>
+            <div class="timeline-item">
+                <strong>20:00 - 20:30</strong><br>
+                <strong>Engagement Ceremony</strong>
             </div>
             <div class="timeline-item">
                 <strong>20:30 - Late</strong><br>
@@ -199,6 +215,8 @@
             </div>
         </div>
 
+        <div class="countdown-title">UNTIL THE BIG DAY!</div>
+        
         <div id="countdown">
             <div class="count-item"><span id="days">00</span><span class="count-label">Days</span></div>
             <div class="count-item"><span id="hours">00</span><span class="count-label">Hours</span></div>
@@ -209,8 +227,9 @@
 
     <div class="section venue-section">
         <img src="LogoCH.png" alt="Venue Logo" class="logoCH">
-        <h3 style="color: var(--dark); font-family: 'Cinzel', serif; letter-spacing: 3px; margin: 10px 0;">The Venue</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.835821568297!2d34.98555249999999!3d32.823194299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dba4c6551b96f%3A0x6a0a09e0802c659e!2z16vXqNeRINek16jXpSDXl9mZ16XXqiAzLCDXl9mZ16TXlA!5e0!3m2!1siw!2sil!4v1712671500000!5m2!1siw!2sil" title="Venue Map" loading="lazy"></iframe>
+        <h3 style="color: var(--dark); font-family: 'Cinzel', serif; letter-spacing: 3px; margin: 10px 0;">Carmel Events Haifa</h3>
+        <p style="font-size: 0.9rem; margin-bottom: 10px;">הרב פרץ חיות 3, חיפה</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.4835843475874!2d34.9961746!3d32.8191986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dba31070e6c53%3A0xc3d3a0e106606001!2z16TXotei16og15TXm9eo157XnCAzLCDXl9mZ16TXlA!5e0!3m2!1siw!2sil!4v1712674200000!5m2!1siw!2sil" title="Venue Map" loading="lazy"></iframe>
     </div>
 
     <div class="section">
@@ -230,7 +249,7 @@
             <label for="guests">عدد الأشخاص / כמות אנשים</label>
             <input type="number" id="guests" min="1" value="1">
 
-            <button type="button" onclick="submitRSVP()">إرسال / שלח</button>
+            <button type="button" onclick="submitRSVP()">إرسאל / שלח</button>
         </div>
     </div>
 
@@ -239,36 +258,26 @@
     </div>
 
     <script>
-        // Countdown
         const targetDate = new Date("April 21, 2026 19:00:00").getTime();
-
         const timer = setInterval(function () {
             const now = new Date().getTime();
             const diff = targetDate - now;
-
             if (diff < 0) {
                 clearInterval(timer);
                 document.getElementById("countdown").innerHTML = "<span style='font-size:1.5rem;'>🎉 IT'S TIME!</span>";
                 return;
             }
-
             document.getElementById("days").innerHTML    = Math.floor(diff / (1000 * 60 * 60 * 24));
             document.getElementById("hours").innerHTML   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             document.getElementById("minutes").innerHTML = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             document.getElementById("seconds").innerHTML = Math.floor((diff % (1000 * 60)) / 1000);
         }, 1000);
 
-        // WhatsApp RSVP
         function submitRSVP() {
             const name       = document.getElementById('name').value.trim();
             const attendance = document.getElementById('attendance').value;
             const guests     = document.getElementById('guests').value;
-
-            if (!name) {
-                alert('נא להזין שם מלא / الرجاء إدخال الاسم');
-                return;
-            }
-
+            if (!name) { alert('נא להזין שם מלא / الرجاء إدخال الاسم'); return; }
             const phone   = "972523626582";
             const message = encodeURIComponent(`שלום! אני: ${name}\n${attendance}\nכמות אנשים: ${guests}`);
             window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
