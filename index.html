@@ -1,290 +1,440 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gassan & Tarez Engagement</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --gold: #c5a059;
-            --dark: #1a1a1a;
-            --white: #ffffff;
-        }
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            margin: 0; padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f9f9f9;
-            color: var(--dark);
-            text-align: center;
-            scroll-behavior: smooth;
-        }
+<title>Gassan & Tarez Engagement</title>
 
-        .hero {
-            height: 100vh;
-            background: url('img1.png') no-repeat center center/cover;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            color: white;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
 
-        .hero h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: clamp(3rem, 12vw, 5rem);
-            margin: 0;
-            animation: fadeInUp 2s;
-            padding: 0 16px;
-        }
+<style>
 
-        .hero p {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(0.8rem, 3.5vw, 1.3rem);
-            letter-spacing: 3px;
-            margin: 10px 0;
-        }
+:root{
+--gold:#c5a059;
+--dark:#1a1a1a;
+--white:#ffffff;
+}
 
-        /* Styling for the relocated venue name */
-        .venue-name-after-hero {
-            font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            color: var(--gold);
-            margin: 20px 0 10px 0; /* Space after image, space before next section */
-            font-weight: 700;
-        }
+*{box-sizing:border-box}
 
-        .section {
-            padding: 20px 16px;
-            max-width: 480px;
-            margin: auto;
-            width: 100%;
-        }
+body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:#f9f9f9;
+color:var(--dark);
+text-align:center;
+scroll-behavior:smooth;
+}
 
-        .timeline {
-            border-left: 2px solid var(--gold);
-            margin: 20px auto;
-            width: fit-content;
-            text-align: left;
-            padding-left: 30px;
-        }
+.hero{
+min-height:100vh;
+padding:20px;
+background:url('img1.png') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-shadow:2px 2px 10px rgba(0,0,0,0.5);
+}
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 20px;
-        }
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:clamp(3rem,12vw,5rem);
+margin:0;
+animation:fadeInUp 2s;
+}
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -37px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            background: var(--gold);
-            border-radius: 50%;
-        }
+.hero p{
+font-family:'Cinzel',serif;
+font-size:clamp(.9rem,3vw,1.3rem);
+letter-spacing:3px;
+margin:10px 0;
+}
 
-        .countdown-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-            color: var(--dark);
-            margin-top: 30px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+.venue-name{
+font-family:'Cinzel',serif;
+font-size:1.1rem;
+letter-spacing:2px;
+color:var(--gold);
+margin:25px 0 10px;
+font-weight:700;
+}
 
-        #countdown {
-            display: flex;
-            justify-content: center;
-            gap: clamp(10px, 3vw, 20px);
-            margin-bottom: 20px;
-            padding: 20px 10px;
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            background-color: #111;
-            border-radius: 8px;
-        }
+.section{
+padding:20px 16px;
+max-width:480px;
+margin:auto;
+}
 
-        .count-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: clamp(1.6rem, 6vw, 2.5rem);
-            font-weight: bold;
-            min-width: clamp(40px, 14vw, 70px);
-        }
+.timeline{
+border-left:2px solid var(--gold);
+margin:20px auto;
+width:fit-content;
+text-align:left;
+padding-left:30px;
+}
 
-        .count-label {
-            font-size: clamp(0.5rem, 1.8vw, 0.65rem);
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 4px;
-        }
+.timeline-item{
+position:relative;
+margin-bottom:20px;
+}
 
-        .venue-section {
-            background-color: #f9f9f9;
-            padding: 20px 16px;
-        }
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-37px;
+top:5px;
+width:12px;
+height:12px;
+background:var(--gold);
+border-radius:50%;
+}
 
-        .logoCH {
-            max-width: min(200px, 55vw);
-            margin: 5px 0;
-        }
+.countdown-title{
+font-family:'Cinzel',serif;
+font-size:1.1rem;
+letter-spacing:3px;
+margin-top:30px;
+font-weight:700;
+}
 
-        .rsvp-form {
-            background: white;
-            padding: 24px 20px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            direction: rtl;
-            text-align: right;
-        }
+#countdown{
+display:flex;
+justify-content:center;
+gap:15px;
+margin:20px 0;
+padding:20px;
+background:#111;
+border-radius:8px;
+color:var(--gold);
+font-family:'Cinzel',serif;
+}
 
-        .rsvp-form label {
-            display: block;
-            font-size: 0.85rem;
-            color: #555;
-            margin-top: 16px;
-            margin-bottom: 4px;
-        }
+.count-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+font-size:2rem;
+font-weight:bold;
+min-width:60px;
+}
 
-        .rsvp-form input, .rsvp-form select {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: 'Montserrat', sans-serif;
-        }
+.count-label{
+font-size:.6rem;
+color:#999;
+letter-spacing:2px;
+margin-top:5px;
+}
 
-        .rsvp-form button {
-            width: 100%;
-            padding: 15px;
-            margin-top: 20px;
-            background-color: var(--gold);
-            color: white;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
+.logoCH{
+max-width:200px;
+margin:10px 0;
+}
 
-        iframe {
-            width: 100%;
-            height: 350px;
-            border: 0;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
+iframe{
+width:100%;
+height:320px;
+border:0;
+border-radius:10px;
+margin-top:15px;
+}
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+.nav-buttons{
+margin-top:15px;
+}
+
+.nav-buttons a{
+display:block;
+padding:12px;
+margin-bottom:10px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.waze{
+background:#33cc66;
+}
+
+.gmaps{
+background:#4285F4;
+}
+
+.rsvp-form{
+background:white;
+padding:24px 20px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+text-align:right;
+}
+
+.rsvp-form label{
+display:block;
+font-size:.85rem;
+margin-top:16px;
+margin-bottom:4px;
+color:#555;
+}
+
+.rsvp-form input,
+.rsvp-form select{
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:5px;
+font-size:1rem;
+}
+
+.rsvp-form button{
+width:100%;
+padding:15px;
+margin-top:20px;
+background:var(--gold);
+color:white;
+font-weight:bold;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:1rem;
+}
+
+@keyframes fadeInUp{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+</style>
 </head>
+
 <body>
 
-    <div class="hero">
-        <h1>Gassan & Tarez</h1>
-        <p>ARE GETTING ENGAGED</p>
-        <div style="font-size: 1.2rem; font-family: 'Cinzel';">21.04.2026<br>Tuesday | 19:00</div>
-    </div>
+<div class="hero">
 
-    <div class="venue-name-after-hero">At Carmel Events Haifa</div>
+<h1>Gassan & Tarez</h1>
+<p>ARE GETTING ENGAGED</p>
 
-    <div class="section">
-        <h2 style="font-family: 'Cinzel'; margin-bottom: 10px;">ENGAGEMENT DAY</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <strong>19:00 - 20:00</strong><br>
-                Reception & <strong>DJ Set</strong>
-            </div>
-            <div class="timeline-item">
-                <strong>20:00 - 20:30</strong><br>
-                <strong>Engagement Ceremony</strong>
-            </div>
-            <div class="timeline-item">
-                <strong>20:30 - Late</strong><br>
-                Main Event with <a href="https://www.instagram.com/alaa_akr/" style="color: var(--gold); text-decoration: none;"><strong>Alaa Akar</strong></a>
-            </div>
-        </div>
+<div style="font-size:1.2rem;font-family:'Cinzel'">
+21.04.2026<br>
+Tuesday | 19:00
+</div>
 
-        <div class="countdown-title">UNTIL THE BIG DAY!</div>
-        
-        <div id="countdown">
-            <div class="count-item"><span id="days">00</span><span class="count-label">Days</span></div>
-            <div class="count-item"><span id="hours">00</span><span class="count-label">Hours</span></div>
-            <div class="count-item"><span id="minutes">00</span><span class="count-label">Mins</span></div>
-            <div class="count-item"><span id="seconds">00</span><span class="count-label">Secs</span></div>
-        </div>
-    </div>
+</div>
 
-    <div class="section venue-section">
-        <img src="LogoCH.png" alt="Venue Logo" class="logoCH">
-        <h3 style="color: var(--dark); font-family: 'Cinzel', serif; letter-spacing: 3px; margin: 10px 0;">Carmel Events Haifa</h3>
-        <p style="font-size: 0.9rem; margin-bottom: 10px;">הרב פרץ חיות 3, חיפה</p>
-        <iframe src="https://www.google.com/maps/contrib/111035565323077282164/reviews" title="Venue Map" loading="lazy"></iframe>
-    </div>
+<div class="venue-name">
+At Carmel Events Haifa
+</div>
 
-    <div class="section">
-        <h2 style="font-family: 'Cinzel'; margin-bottom: 5px;">We can't wait to celebrate!</h2>
-        <p style="margin-bottom: 20px;">Kindly complete the RSVP form below.</p>
 
-        <div class="rsvp-form" id="rsvpForm">
-            <label for="name">الاسم الكامل / שם מלא *</label>
-            <input type="text" id="name" required placeholder="أدخل اسمك الكامل">
+<div class="section">
 
-            <label for="attendance">هل ستتمكن من الحضور؟ / האם تגיע/י? *</label>
-            <select id="attendance" required>
-                <option value="כן, אני מגיע/ה">نعم، سأحضر / כן, אני מגיע/ה</option>
-                <option value="לצערי לא אוכל להגיע">آسف، لن أتمكن / לצערי לא אוכל להגיע</option>
-            </select>
+<h2 style="font-family:'Cinzel'">
+ENGAGEMENT DAY
+</h2>
 
-            <label for="guests">عدد الأشخاص / כמות אנשים</label>
-            <input type="number" id="guests" min="1" value="1">
+<div class="timeline">
 
-            <button type="button" onclick="submitRSVP()">إرسال / שלח</button>
-        </div>
-    </div>
+<div class="timeline-item">
+<strong>19:00 - 20:00</strong><br>
+Reception & DJ Set
+</div>
 
-    <div class="section">
-        <img src="final_design.png" alt="Design" style="width: 100%;">
-    </div>
+<div class="timeline-item">
+<strong>20:00 - 20:30</strong><br>
+Engagement Ceremony
+</div>
 
-    <script>
-        const targetDate = new Date("April 21, 2026 19:00:00").getTime();
-        const timer = setInterval(function () {
-            const now = new Date().getTime();
-            const diff = targetDate - now;
-            if (diff < 0) {
-                clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "<span style='font-size:1.5rem;'>🎉 IT'S TIME!</span>";
-                return;
-            }
-            document.getElementById("days").innerHTML    = Math.floor(diff / (1000 * 60 * 60 * 24));
-            document.getElementById("hours").innerHTML   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("minutes").innerHTML = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById("seconds").innerHTML = Math.floor((diff % (1000 * 60)) / 1000);
-        }, 1000);
+<div class="timeline-item">
+<strong>20:30 - Late</strong><br>
+Main Event with
+<a href="https://www.instagram.com/alaa_akr/" target="_blank" style="color:var(--gold);text-decoration:none">
+<strong>Alaa Akar</strong>
+</a>
+</div>
 
-        function submitRSVP() {
-            const name       = document.getElementById('name').value.trim();
-            const attendance = document.getElementById('attendance').value;
-            const guests     = document.getElementById('guests').value;
-            if (!name) { alert('נא להזין שם מלא / الرجاء إدخال الاسم'); return; }
-            const phone   = "972523626582";
-            const message = encodeURIComponent(`שלום! אני: ${name}\n${attendance}\nכמות אנשים: ${guests}`);
-            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
-        }
-    </script>
+</div>
+
+<div class="countdown-title">
+UNTIL THE BIG DAY
+</div>
+
+<div id="countdown">
+
+<div class="count-item">
+<span id="days">00</span>
+<span class="count-label">Days</span>
+</div>
+
+<div class="count-item">
+<span id="hours">00</span>
+<span class="count-label">Hours</span>
+</div>
+
+<div class="count-item">
+<span id="minutes">00</span>
+<span class="count-label">Mins</span>
+</div>
+
+<div class="count-item">
+<span id="seconds">00</span>
+<span class="count-label">Secs</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<img src="LogoCH.png" class="logoCH">
+
+<h3 style="font-family:'Cinzel';letter-spacing:3px">
+Carmel Events Haifa
+</h3>
+
+<p>
+הרב פרץ חיות 3, חיפה
+</p>
+
+<iframe
+src="https://www.google.com/maps?q=32.806173,34.985653&hl=iw&z=16&output=embed"
+loading="lazy">
+</iframe>
+
+<div class="nav-buttons">
+
+<a class="waze"
+href="https://waze.com/ul?ll=32.806173,34.985653&navigate=yes"
+target="_blank">
+נווט עם Waze
+</a>
+
+<a class="gmaps"
+href="https://maps.google.com/?q=32.806173,34.985653"
+target="_blank">
+פתח ב-Google Maps
+</a>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2 style="font-family:'Cinzel'">
+We can't wait to celebrate!
+</h2>
+
+<p>
+Kindly complete the RSVP form below
+</p>
+
+<div class="rsvp-form">
+
+<label>
+الاسم الكامل / שם מלא *
+</label>
+
+<input
+type="text"
+id="name"
+autocomplete="name"
+placeholder="أدخل اسمك الكامل">
+
+<label>
+هل ستتمكن من الحضور؟ / האם תגיע/י?
+</label>
+
+<select id="attendance">
+
+<option value="כן, אני מגיע/ה">
+نعم، سأحضر / כן, אני מגיע/ה
+</option>
+
+<option value="לצערי לא אוכל להגיע">
+آسف، لن أتمكن / לצערי לא אוכל להגיע
+</option>
+
+</select>
+
+<label>
+عدد الأشخاص / כמות אנשים
+</label>
+
+<input
+type="number"
+id="guests"
+min="1"
+max="10"
+value="1">
+
+<button onclick="submitRSVP()">
+إرسال / שלח
+</button>
+
+</div>
+
+</div>
+
+
+<div class="section">
+<img src="final_design.png" style="width:100%">
+</div>
+
+
+<script>
+
+const targetDate = new Date(2026,3,21,19,0,0).getTime()
+
+setInterval(function(){
+
+const now = new Date().getTime()
+const diff = targetDate - now
+
+if(diff < 0){
+document.getElementById("countdown").innerHTML="🎉 IT'S TIME!"
+return
+}
+
+document.getElementById("days").innerHTML=Math.floor(diff/(1000*60*60*24))
+document.getElementById("hours").innerHTML=Math.floor((diff%(1000*60*60*24))/(1000*60*60))
+document.getElementById("minutes").innerHTML=Math.floor((diff%(1000*60*60))/(1000*60))
+document.getElementById("seconds").innerHTML=Math.floor((diff%(1000*60))/1000)
+
+},1000)
+
+
+function submitRSVP(){
+
+let name=document.getElementById("name").value.trim()
+let attendance=document.getElementById("attendance").value
+let guests=document.getElementById("guests").value
+
+if(!name){
+alert("נא להזין שם מלא / الرجاء إدخال الاسم")
+return
+}
+
+if(attendance.includes("לא")){
+guests=0
+}
+
+let phone="972523626582"
+
+let message=encodeURIComponent(
+"שלום! אני: "+name+"\n"+attendance+"\nכמות אנשים: "+guests
+)
+
+window.open("https://wa.me/"+phone+"?text="+message,'_blank')
+
+}
+
+</script>
+
 </body>
 </html>
